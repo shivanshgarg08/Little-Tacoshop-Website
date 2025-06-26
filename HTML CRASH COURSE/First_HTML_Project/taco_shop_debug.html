@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Shivansh Garg">
+    <meta name="description" content="The Official website for the Little Taco Shop"> 
+    <title>The Little Taco Shop</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .debug-info {
+            background: #f0f0f0;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .debug-info h3 {
+            color: #d32f2f;
+            margin-top: 0;
+        }
+        .test-image {
+            border: 2px dashed #ccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .working-image {
+            border: 2px solid green;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+        nav a:hover {
+            color: #d32f2f;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figcaption {
+            font-style: italic;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-info">
+        <h3>🔍 DEBUG MODE - Image Troubleshooting</h3>
+        <p><strong>Current image path:</strong> <code>Img/tacos_and_drink_400x267.png</code></p>
+        <p><strong>Check these common issues:</strong></p>
+        <ul>
+            <li>✅ Folder name case: Is it "Img" or "img"?</li>
+            <li>✅ File name case: Check exact spelling</li>
+            <li>✅ File exists: Is the image actually in the folder?</li>
+            <li>✅ File format: Is it really a .png file?</li>
+        </ul>
+    </div>
+
+    <header>
+        <h1>Welcome To The Little Taco Shop</h1>
+        <hr>
+        <nav>
+            <ul>
+                <li><a href="#About">About <abbr title="The Little Taco Shop">LTS</abbr></a></li>
+                <li><a href="#Menu">Our Menu</a></li>
+                <li><a href="#Hour">Store Hours</a></li>
+                <li><a href="#Contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        
+        <div class="debug-info">
+            <h3>🧪 Image Path Tests</h3>
+            <p>Try these different paths to see which one works:</p>
+            
+            <div class="test-image">
+                <p><strong>Test 1:</strong> Your original path</p>
+                <img src="Img/tacos_and_drink_400x267.png" alt="Tacos and a Drink" width="200" height="133">
+                <br><code>Img/tacos_and_drink_400x267.png</code>
+            </div>
+            
+            <div class="test-image">
+                <p><strong>Test 2:</strong> Lowercase folder</p>
+                <img src="img/tacos_and_drink_400x267.png" alt="Tacos and a Drink" width="200" height="133">
+                <br><code>img/tacos_and_drink_400x267.png</code>
+            </div>
+            
+            <div class="test-image">
+                <p><strong>Test 3:</strong> With dot slash</p>
+                <img src="./Img/tacos_and_drink_400x267.png" alt="Tacos and a Drink" width="200" height="133">
+                <br><code>./Img/tacos_and_drink_400x267.png</code>
+            </div>
+            
+            <div class="test-image">
+                <p><strong>Test 4:</strong> Lowercase with dot slash</p>
+                <img src="./img/tacos_and_drink_400x267.png" alt="Tacos and a Drink" width="200" height="133">
+                <br><code>./img/tacos_and_drink_400x267.png</code>
+            </div>
+            
+            <div class="test-image">
+                <p><strong>Test 5:</strong> Images folder</p>
+                <img src="images/tacos_and_drink_400x267.png" alt="Tacos and a Drink" width="200" height="133">
+                <br><code>images/tacos_and_drink_400x267.png</code>
+            </div>
+        </div>
+
+        <div class="working-image">
+            <h3>✅ Working Example (Online Image)</h3>
+            <p>This should always work (uses online image):</p>
+            <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=400&h=267&fit=crop" alt="Tacos" width="400" height="267">
+            <figcaption>Example working image from online</figcaption>
+        </div>
+        
+        <div class="debug-info">
+            <h3>📋 Next Steps:</h3>
+            <ol>
+                <li><strong>Check Browser Console:</strong> Press F12, go to Console tab, look for 404 errors</li>
+                <li><strong>Verify File Structure:</strong> Take a screenshot of your VS Code file explorer</li>
+                <li><strong>Test Direct Access:</strong> Try opening <code>http://localhost:5500/Img/tacos_and_drink_400x267.png</code> in browser</li>
+                <li><strong>Check File Properties:</strong> Right-click the image file, check its actual name and extension</li>
+            </ol>
+        </div>
+    </header>
+</body>
+</html>
